@@ -14,9 +14,9 @@ SQILTE3 = {
 POSTGRESQL = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ecommerce',
+        'NAME': 'nombre_de_base_de_datos',
         'USER': 'postgres',
-        'PASSWORD': 'FerBD42276',
+        'PASSWORD': 'contraseña_base_de_datos',
         'HOST': 'localhost',
         'PORT': 5432,
     }
