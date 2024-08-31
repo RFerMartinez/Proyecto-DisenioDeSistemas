@@ -1,0 +1,23 @@
+Ctrl + Shift + P -> Abrir configuraciones de usuario (.json)
+
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorTheme": "Palenight Theme",
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": true,
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.linkedEditing": true,
+    "window.openFilesInNewWindow": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.autofetch": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
+    //Para que la terminar se abra en la ruta de la carpeta del proyecto que se esté trabajando
+    "terminal.integrated.cwd": "${workspaceFolder}/core",
+}
