@@ -1,6 +1,6 @@
 django-admin help | Para acceder a la lista de comandos de ayuda.
 
-git rm --cached core/core/db.py | GIT deja de rastrear los cambios edl archivo, elimina la caché.
+git rm --cached Distribuidora/core/db.py | GIT deja de rastrear los cambios edl archivo, elimina la caché. (Funciona a nivel general repo)
 git rm -r --cached .
 
 
