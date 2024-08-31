@@ -9,15 +9,13 @@ SQILTE3 = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-print("hola")
-
 # Configuración para DB PostgreSQL
 POSTGRESQL = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nombre_de_base_de_datos',
+        'NAME': '<nombre_de_base_de_datos>',
         'USER': 'postgres',
-        'PASSWORD': 'contraseña_base_de_datos',
+        'PASSWORD': '<contraseña_base_de_datos>',
         'HOST': 'localhost',
         'PORT': 5432,
     }

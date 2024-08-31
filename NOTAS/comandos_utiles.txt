@@ -2,4 +2,10 @@ django-admin help | Para acceder a la lista de comandos de ayuda.
 
 git rm --cached core/core/db.py | GIT deja de rastrear los cambios edl archivo, elimina la caché.
 
+git update-index --assume-unchanged core/core/db.py | Este comando indica a GIT que no debe conciderar los cambios futuros del archivo, pero el archivo aún sigue existiendo en el repo.
+
+git update-index --no-assume-unchanged core/core/db.py | Es para que GIT vuelva a detectar los cambios en el archivo.
+
+
+
 
