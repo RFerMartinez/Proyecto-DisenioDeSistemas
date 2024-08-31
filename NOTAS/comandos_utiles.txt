@@ -1,0 +1,2 @@
+django-admin help | Para acceder a la lista de comandos de ayuda.
+
