@@ -7,6 +7,8 @@ git update-index --assume-unchanged core/core/db.py | Este comando indica a GIT 
 
 git update-index --no-assume-unchanged core/core/db.py | Es para que GIT vuelva a detectar los cambios en el archivo.
 
+pip freeze > requirements.txt | para crear un archivo "requirements.txt con las dependencias
+pip install -r requirements.txt | para instalar las dependencias en el entorno virtual
 
 
 
