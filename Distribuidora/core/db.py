@@ -13,7 +13,7 @@ SQILTE3 = {
 POSTGRESQL = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '<nombre_Database>',
+        'NAME': '<nombre_DataBase>',
         'USER': 'postgres',
         'PASSWORD': '<password_DataBase>',
         'HOST': 'localhost',
