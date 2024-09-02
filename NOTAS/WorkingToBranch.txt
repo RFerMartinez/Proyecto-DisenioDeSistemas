@@ -1,0 +1,17 @@
+Para trabajar con "ramas" Branch, se hace lo siguiente...
+
+1. Se clona el repo
+
+2. Se crea una rama -> git checkout -b nombre_rama
+
+3. Hacer los push en esa rama.. -> git push origin nombre_rama
+
+
+
+
+
+
+
+
+
+

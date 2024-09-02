@@ -9,8 +9,54 @@ git update-index --assume-unchanged Distribuidora/core/db.py | Este comando indi
 
 git update-index --no-assume-unchanged core/core/db.py | Es para que GIT vuelva a detectar los cambios en el archivo.
 
+-REQUERIMIENTOS-
 pip freeze > requirements.txt | para crear un archivo "requirements.txt con las dependencias
 pip install -r requirements.txt | para instalar las dependencias en el entorno virtual
+
+-COMANDOS USUALES-
+pwd | muestra la ruta del directorio actual
+ls | Para ver los archivos y directorios en el directorio actual
+
+cd .. | para retroceder un nivel en el directorio
+cd <nombre_directorio> | para acceder a un directorio
+
+mkdir <nombre_carpeta> |crea una carpeta
+mrdir <nombre_peta> | elimina una carpeta vacía
+mkdir -r <nombre_carpeta> | elimina una carpeta y su directorio
+
+clear | borrar, o limpiar, la consola
+
++------------------------------+
+|-CONFIGURACION INICIAL DE GIT-|
++------------------------------+
+git config --list
+git config --global user.name <nombre_usuario>
+git config --global user.email <correo_usuario>
+git config --global color.ui auto
+
++-------------------------------------------------+
+|-BAJAR LOS CAMBIOS DESDE EL REPO, HACIA EL LOCAL-|
++-------------------------------------------------+
+..para actualizar el "local" (la version más reciente), antes de haber hecho un 'git add .'
+    git checkout -- <nombre-del-archivo> (actualiza un solo archivo)
+    o sino..
+    git checkout -- . (actualiza todo el repo)
+
+..para actualizar el "local" (la version más reciente), luego de haber hecho un 'git add .' pero antes de 'git commit'
+    git reset (quita los archivos del indice)
+    git checkout -- .
+
+..luego de haber hecho 'git commit' pero hacer de pushearlo
+    git reset --soft HEAD~1 (mantiene los cambios en los archivos, y los deja en el indice. Es decir, solo le quita el comit)
+    o, sino. Si se quiere deshacer el comit y también los cambios...
+    git reset --hard HEAD~1
+
+
+
+
+
+
+
 
 
 
