@@ -12,3 +12,13 @@ def home(request):
         context=ctx
     )
 
+def home2(request):
+    template="home2.html"
+    ctx = {
+
+    }
+    return render(
+        request=request,
+        template_name=template,
+        context=ctx
+    )
