@@ -31,6 +31,8 @@ INSTALLED_APPS = [
 
     # My Apps
     'apps.productos',
+    'apps.categorias',
+    'apps.usuarios',
 ]
 
 MIDDLEWARE = [
