@@ -12,8 +12,19 @@ def home(request):
         context=ctx
     )
 
-def home2(request):
-    template="home2.html"
+def IniciarSesion(request):
+    template="IniciarSesion.html"
+    ctx = {
+
+    }
+    return render(
+        request=request,
+        template_name=template,
+        context=ctx
+    )
+
+def Registrarse(request):
+    template="Registrarse.html"
     ctx = {
 
     }

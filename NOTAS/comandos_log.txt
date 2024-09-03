@@ -1,0 +1,9 @@
+Para ver la lista de commits
+----------------------------
+git log                         -devuelve una lista de todos los commits
+git log -n 3                    -devuelve los ultimos 3 commits
+git log oneline -n 3            -devuelve los ultimos 3 commits. En un formato más compacto
+git log --since="2023-09-01"    -devuelve la lista de commit a partir de cierta fecha.
+git log branch_name -n 5        -muestra los commit recintes de una rama
+
+git log --oneline --all         -muestra todos los commit

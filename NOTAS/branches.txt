@@ -1,0 +1,40 @@
+Una rama es un puntero que apunta especificamente a un conjunto de commits.
+Crear una rama es crear una copia del proyecto para trabajar aparte, de fomra paralela
+
+git branch              -muestra todas las ramas que se tiene creada
+
+git branch nueva-rama   -crear una nueva rama
+    (ahora si se ejecuta el comando "git branch" aparecerá la rama 'main' y la rama 'nueva-rama'. La rama 'main' aparecerá en verde, por que indica que estamos en esa rama)
+
+git cheackout nueva-rama    -esto es para movernos a la rama nueva que se creo
+
+git switch nueva-rama       -esto es para movernos a la rama nueva que se creo. (ESTE COMANDO ES RECOMENDADO)
+
+git switch -c nueva-rama    -crea una nueva rama y se posiciona en la nueva rama
+
+git branch -d nueva rama-para-borrar    -comando para borrar una rama, ES NECESARIO ESTAR FUERA DE LA RAMA. CON switch
+
+PARA MODIFICAR EL NOMBRE DE UNA RAMA
+------------------------------------
+git branch
+    nombre-rama
+git branch -m nombre-rama nombre-modificado
+git branch
+    nombre-modificado
+
+
++------+
+|MARGES|
++------+
+tengo que estar en la rama a la cual voy a fucionar, por ejemplo la rama "main"
+
+
+
+
+
+
+
+
+
+
+
