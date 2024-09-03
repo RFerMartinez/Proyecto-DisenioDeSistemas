@@ -16,4 +16,4 @@ class Producto(models.Model):
     estado = models.BooleanField(default=True)
 
     # Claves foráneas a las tablas 'Categoría' y 'Unidad'
-    categoria = 
+    categoria = models.BooleanField(default=True)
