@@ -1,0 +1,21 @@
+PASOS A SEGUIR PARA TRABAJAR EN PARALELO
+
+1. estar en la rama 'main'. En el directorio PROYECTO-DisenioDeSistemas
+2. git pull
+3. git checkput -- .
+
+4. git switch -c nombre_rama
+Si ya se tiene una rama creada, ir a la rama --> git switch nombre_rama.
+
+5. hacer cambios y guardar
+    git add .
+    git commit -m "mensaje"
+    git push -u origin nombre_rama
+
+6. juntar (merge) la rama creada, a la rama principal (main)
+    estar posicionado en la rama main --> git switch main
+    actualizar la rama (por las dudas) --> git pull origin main | git pull | git cheackout
+    juntar la rama --> git merge rama-nueva
+
+    actualizar repo --> git push | git push origin main.
+
