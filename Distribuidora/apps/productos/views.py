@@ -25,7 +25,7 @@ class ListarProductos(ListView):
     # Definir el modelo sobre el cual se trabajará (para las querys)
     model = Producto
     # Definir la cantidad de productos por páginas
-    paginate_by = 10
+    paginate_by = 2
     # Definir como se hará referenca a los productos desde el template (via context)
     context_object_name = 'productos'
 
@@ -33,6 +33,7 @@ class ListarProductos(ListView):
     def get_context_data(self, **kwargs):
         contexto = super().get_context_data(**kwargs)
         '''Realizar lógica y/o agregar datos al contexto. Realizar filtros'''
+        return contexto
     
     # Definir/modificar la consulta
     def get_queryset(self):
