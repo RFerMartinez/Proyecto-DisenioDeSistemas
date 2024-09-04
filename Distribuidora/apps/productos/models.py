@@ -9,6 +9,12 @@ class UnidadMedida(models.Model):
     prefijo = models.CharField(max_length=5, unique=True, null=False, blank=False, verbose_name='Prefijo')
     estado = models.BooleanField(default=True)
 
+    class Meta:
+        db_table = "UnidadMedida"
+
+    def __str__(self):
+        return f"{self.prefijo} - {self.nombre}"
+
 class Producto(models.Model):
     # CAMPOS DE LA TABLA 'PRODUCTO'
     codigo = models.CharField(unique=True, null=False, blank=False, verbose_name='Código')
@@ -18,7 +24,7 @@ class Producto(models.Model):
     descripcion = models.TextField(max_length=150, verbose_name='Descripción')
     caducidad = models.DateField(verbose_name='Fecha caducidad')
     cantidad_minima = models.PositiveSmallIntegerField(null=False, blank=False, verbose_name='Cantidad Mínima')
-    cantidad_minima = models.PositiveSmallIntegerField(null=False, blank=False, verbose_name='Cantidad Máxima')
+    cantidad_maxima = models.PositiveSmallIntegerField(null=False, blank=False, verbose_name='Cantidad Máxima')
     estado = models.BooleanField(default=True)
 
     # relaciones a las tablas 'Categoría' y 'Unidad'

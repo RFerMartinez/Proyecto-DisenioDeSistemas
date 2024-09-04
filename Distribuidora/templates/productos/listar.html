@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de productos</h1>
+
+    {% if productos %}
+        <ul>
+            {% for p in productos %}
+                <li>
+                    {{p.nombre}} - {{p.precio}} - 
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>No hay productos</h2>
+    {% endif %}
+
+</body>
+</html>
