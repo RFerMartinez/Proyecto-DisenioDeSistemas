@@ -10,4 +10,5 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('IniciarSesion/', views.IniciarSesion, name="IniciarSesion"),
     path('Registrarse/', views.Registrarse, name="Registrarse"),
+    path('CerrarSesion/', views.CerrarSesion, name="CerrarSesion"),
 ]
