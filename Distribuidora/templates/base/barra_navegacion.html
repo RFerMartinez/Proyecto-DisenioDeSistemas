@@ -1,0 +1,120 @@
+{% load static %}
+<div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px; height: 100vh;">
+        
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{% static 'image/icon_user.jpg' %}" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Usuario</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">Configuraciones</a></li>
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <ul class="nav nav-pills flex-column mb-auto">
+
+        <li>
+            <a href="#" class="nav-link text-white my-1 menu-lateral-item">
+                <div class="row w-100">
+                    <div class="col-2">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="col-8">
+                        Inicio
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="nav-link text-white my-1 menu-lateral-item">
+                <div class="row w-100">
+                    <div class="col-2">
+                        <i class="fas fa-people-carry"></i>
+                    </div>
+                    <div class="col-9">
+                        Pedidos
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="nav-link text-white my-1 menu-lateral-item">
+                <div class="row w-100">
+                    <div class="col-2">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="col-9">
+                        Repartos
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class=" nav-link text-white my-1 menu-lateral-item">
+                <div class="row w-100">
+                    <div class="col-2">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="col-9">
+                        Clientes
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="nav-link text-white my-1 menu-lateral-item">
+                <div class="row w-100">
+                    <div class="col-2">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="col-9">
+                        Empleados
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="nav-link text-white my-1 menu-lateral-item">
+                <div class="row w-100">
+                    <div class="col-2">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="col-9">
+                        Contabilidad
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <hr class="mt-auto">
+
+    <!--Botón para cerrar sesion-->
+    <div>
+        <a href="#" class="rounded nav-link text-white py-2 px-3 menu-lateral-item">
+            <div class="row w-100">
+                <div class="col-2">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+                <div class="col-9">
+                    Cerrar sesion
+                </div>
+            </div>
+        </a>
+    </div>
+    
+</div>
