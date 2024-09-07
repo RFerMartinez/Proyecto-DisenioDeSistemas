@@ -1,12 +1,8 @@
 {% load static %}
-<!--
-vh-100
--->
-<nav class="col-md-3 col-lg-2 d-md-block bg-dark text-white p-3">
-    <div class="position-sticky">
-
+<nav class="col-md-3 col-lg-2 d-none d-md-block bg-dark text-white p-3 position-fixed vh-100 d-flex flex-column">
+    <div class="d-flex flex-column h-100 pb-5">
         <!-- User Profile Section -->
-        <div class="dropdown mb-4">
+        <div class="dropdown mb-2">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{% static 'image/icon_user.jpg' %}" alt="Usuario" width="32" height="32" class="rounded-circle me-2">
                 <strong>Usuario</strong>
@@ -99,11 +95,10 @@ vh-100
             </li>
         </ul>
 
-        <hr class="mt-auto">
-
         <!-- Sign Out Button -->
-        <div>
-            <a href="#" class="nav-link text-white py-2 px-3 menu-lateral-item">
+        <div class="mt-auto mb-3">
+            <hr class="hr">
+            <a href="#" class="nav-link text-white py-2 px-3 menu-lateral-item rounded">
                 <div class="row">
                     <div class="col-2">
                         <i class="fas fa-sign-out-alt"></i>
