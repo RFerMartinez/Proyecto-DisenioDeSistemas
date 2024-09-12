@@ -45,6 +45,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Maneja la autenticación con contraseñas
+    # Otros backends si los necesitas
+]
+
 ROOT_URLCONF = 'settings.urls'
 
 TEMPLATES = [
@@ -70,6 +75,8 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = db.POSTGRESQL
+
+AUTH_USER_MODEL = 'usuarios.Cliente'
 
 
 # Password validation
