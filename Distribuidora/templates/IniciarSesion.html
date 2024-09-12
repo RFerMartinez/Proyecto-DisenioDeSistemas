@@ -38,7 +38,7 @@
     <main class="container">
         <div class="row">
             <div class="col-md-7 offset-md-2 mt-5" >
-                <form action="/IniciarSesion/" method="POST" class="card card-body">
+                <form action="{% url 'usuarios:IniciarSesion' %}" method="POST" class="card card-body">
                     <h1 class="text-center">Iniciar Sesion</h1>
                     {{error}}
                     {% csrf_token %}

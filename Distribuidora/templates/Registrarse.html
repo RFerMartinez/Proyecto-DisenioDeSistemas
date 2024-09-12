@@ -82,10 +82,17 @@
     </main>
 </body> -->
 
-<form action="" method="post"> {% csrf_token %}
-
-    {{ form }}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    
+    <button type="submit">Registrar</button>
 </form>
+
 
 
 </html>

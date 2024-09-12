@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 
 DATABASES = db.POSTGRESQL
 
-AUTH_USER_MODEL = 'usuarios.Cliente'
+# AUTH_USER_MODEL = 'usuarios.Cliente'
 
 
 # Password validation
