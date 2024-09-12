@@ -4,5 +4,9 @@ DAVOR:
 |__hacer la parte de usuario (front, loguin, redireccion, model(si te animas xD))
 
 FER:
-|_modulo de producto(ALTA de producto, MODIFICAR campos de un producto.., imágenes, categorias)
+|_| |modulo de producto(ALTA de producto, MODIFICAR campos de un producto.., imágenes, categorias)
+|
+|_| |módulo de usuario (perfil, modificar datos)
+|
+|_| |módulo de carrito
 
