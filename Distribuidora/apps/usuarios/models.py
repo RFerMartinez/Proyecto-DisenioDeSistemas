@@ -26,3 +26,4 @@ class Cliente(models.Model):
         # ordering = ['last_name'] # ['-precio'] -> esto es para ordenar de manera descendente
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
+

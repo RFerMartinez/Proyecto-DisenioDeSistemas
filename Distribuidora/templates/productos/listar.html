@@ -2,7 +2,17 @@
 
 {% block contenido %}
 
-    <h1>Lista de productos</h1>
+    <div class="row align-item-center mt-3">
+        <div class="col">
+            <h1 class="h1">{{ titulo }}</h1>
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-primary" href="{% url 'productos:agregar' %}">
+                <i class="fas fa-plus"></i>
+                Agregar Nuevo Productos
+            </a>
+        </div>
+    </div>
 
     {% include 'base/paginacion.html' %}
 

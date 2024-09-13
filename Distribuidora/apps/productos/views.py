@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 
-from .forms import FormProducto
+from .forms import FormularioRegistrarProducto
 from .models import Producto
 
 # VISTA basada en funcion para poder listar los produtos
@@ -33,6 +33,7 @@ class ListarProductos(ListView):
     def get_context_data(self, **kwargs):
         contexto = super().get_context_data(**kwargs)
         '''Realizar lógica y/o agregar datos al contexto. Realizar filtros'''
+        contexto['titulo'] = 'Lista de Productos'
         return contexto
     
     # Definir/modificar la consulta
@@ -44,8 +45,13 @@ class ListarProductos(ListView):
 class CrearProducto(CreateView):
     template_name = "productos/crear.html"
     model = Producto
-    form_class = FormProducto
+    form_class = FormularioRegistrarProducto
 
     # Si se completa la accion, se redirige al listado
     success_url = reverse_lazy("productos:listar")
+
+    def get_context_data(self, **kwargs):
+        contexto = super().get_context_data(**kwargs)
+        contexto['titulo'] = 'Crear Nuevo Producto'
+        return contexto
 

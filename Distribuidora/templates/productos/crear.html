@@ -1,13 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base/base.html' %}
 
-    
-    
-</body>
-</html>
+{% block contenido %}
+
+<div class="container">
+    <div class="row justify-content-center m-3">
+
+        <!--No ocupa todo el ancho de la pantalla-->
+        <div class="col-lg-6">
+            
+            <h1 class="text-center mb-4">{{ titulo }}</h1>
+
+            <!--Formulario para crear nuevo producto-->
+            <form action="{% url 'productos:agregar' %}" method="POST" class="card card-body bg-light p-4"> {% csrf_token %}
+            
+                <!-- Campo 'Código' -->
+                <div class="mb-3">
+                    <label for="{{ form.codigo.id_for_label }}" class="form-label fw-bold">Código:</label>
+                    {{ form.codigo }}
+                    {% if form.codigo.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.codigo.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Nombre' -->
+                <div class="mb-3">
+                    <label for="{{ form.nombre.id_for_label }}" class="form-label fw-bold">Nombre:</label>
+                    {{ form.nombre }}
+                    {% if form.nombre.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.nombre.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Precio' -->
+                <div class="mb-3">
+                    <label for="{{ form.precio.id_for_label }}" class="form-label fw-bold">Precio:</label>
+                    {{ form.precio }}
+                    {% if form.precio.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.precio.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Costo' -->
+                <div class="mb-3">
+                    <label for="{{ form.costo.id_for_label }}" class="form-label fw-bold">Costo:</label>
+                    {{ form.costo }}
+                    {% if form.costo.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.costo.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Descripción' -->
+                <div class="mb-3">
+                    <label for="{{ form.descripcion.id_for_label }}" class="form-label fw-bold">Descripción:</label>
+                    {{ form.descripcion }}
+                    {% if form.descripcion.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.descripcion.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Caducidad' -->
+                <div class="mb-3">
+                    <label for="{{ form.caducidad.id_for_label }}" class="form-label fw-bold">Fecha de caducidad:</label>
+                    {{ form.caducidad }}
+                    {% if form.caducidad.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.caducidad.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Cantidad mínima' -->
+                <div class="mb-3">
+                    <label for="{{ form.cantidad_minima.id_for_label }}" class="form-label fw-bold">Cantidad mínima:</label>
+                    {{ form.cantidad_minima }}
+                    {% if form.cantidad_minima.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.cantidad_minima.errors %}
+                        {   { error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Cantidad máxima' -->
+                <div class="mb-3">
+                    <label for="{{ form.cantidad_maxima.id_for_label }}" class="form-label fw-bold">Cantidad máxima:</label>
+                    {{ form.cantidad_maxima }}
+                    {% if form.cantidad_maxima.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.cantidad_maxima.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Categoría' -->
+                <div class="mb-3">
+                    <label for="{{ form.categoria.id_for_label }}" class="form-label fw-bold">Categoría:</label>
+                    {{ form.categoria }}
+                    {% if form.categoria.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.categoria.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Campo 'Unidad' -->
+                <div class="mb-3">
+                    <label for="{{ form.unidad.id_for_label }}" class="form-label fw-bold">Unidad:</label>
+                    {{ form.unidad }}
+                    {% if form.unidad.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.unidad.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <!-- Botón de Enviar -->
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Registrar Producto</button>
+                </div>
+            
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock contenido %}

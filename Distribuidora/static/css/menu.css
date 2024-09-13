@@ -1,3 +1,10 @@
 .menu-lateral-item:hover {
     background-color: #525252; /* Color de fondo cuando se pasa el puntero */
 }
+
+.custom-shadow {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ajusta el nivel de sombra según tu preferencia */
+    padding: 10px;
+    background-color: #f8f9fa; /* Color de fondo */
+    border-radius: 5px;
+}
