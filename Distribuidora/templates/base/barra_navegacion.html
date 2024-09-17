@@ -1,6 +1,13 @@
 {% load static %}
-<nav class="col-md-3 col-lg-2 d-none d-md-block bg-dark text-white p-3 position-fixed vh-100 d-flex flex-column">
-    <div class="d-flex flex-column h-100 pb-5">
+
+<script src="{% static 'js/sidBar.js' %}"></script>
+
+
+<nav class="col-md-3 col-lg-2 d-none {% if user.is_authenticated %} d-md-block {% endif %} bg-dark text-white position-fixed overflow-auto d-flex flex-column p-3" id="sidBar" style="height: calc(100vh - 60px); z-index: 1050;">
+    <div class="d-flex flex-column h-100">
+
+
+        {% if user.is_authenticated %}
         <!-- User Profile Section -->
         <div class="dropdown mb-2">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -96,7 +103,7 @@
         </ul>
 
         <!-- Sign Out Button -->
-        <div class="mt-auto mb-3">
+        <div class="mt-auto">
             <hr class="hr">
 
             {% if user.is_authenticated %}
@@ -123,5 +130,23 @@
                 </a>
             {% endif %}
         </div>
+        {% else %}
+        <ul class="nav nav-pills flex-column mb-auto">
+            <hr class="hr py-2">
+            <li>
+                <a href="{% url 'usuarios:IniciarSesion' %}" class="btn btn-outline-light w-100 mb-3">
+                    Iniciar Sesion
+                </a>
+                
+            </li>
+
+            <li>
+                <a href="{% url 'usuarios:Registrarse' %}" class="btn btn-primary y-auto w-100">
+                    Registrarse
+                </a>
+            </li>
+        </ul>
+        {% endif %}
+
     </div>
 </nav>
