@@ -1,5 +1,5 @@
 from django.db.models.query import QuerySet
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 
 from django.views.generic.edit import CreateView
@@ -54,4 +54,20 @@ class CrearProducto(CreateView):
         contexto = super().get_context_data(**kwargs)
         contexto['titulo'] = 'Crear Nuevo Producto'
         return contexto
+    
+def mostrarDetalles(request, pk):
+    producto = get_object_or_404(Producto, pk=pk)
+
+    # Obtener los favoritos del usuario actual
+    # if request.user.is_authenticated:
+    #     favoritos = Favorito.objects.filter(usuario=request.user)
+    #     favoritos_ids = list(favoritos.values_list('producto_id', flat=True))
+    # else:
+    #     favoritos_ids = []
+
+    context = {
+        'productos': producto,
+        # 'favoritos_ids': favoritos_ids,
+    }
+    return render(request, 'productos/mostrarDetalles.html', context)
 

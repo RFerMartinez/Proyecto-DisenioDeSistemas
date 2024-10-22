@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="container col-xxl-8 px-4 py-3"></div>
+<div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+    <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'image/portada.jpg' %}" class="d-block mx-lg-auto img-fluid" width="600" height="400" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">NOMBRE DE LA DISTRIBUIDORA</h1>
+        <p class="lead">
+            dESCRIPCION PARA LA DISTRIBUIDORA JEJE
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a type="button" href="{% url 'productos:listar' %}" class="btn btn-primary btn-lg px-4 me-md-2">Ver Productos</a>
+            <a type="button" class="btn btn-outline-secondary btn-lg px-4">OTRO</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+    .img-fluid {
+    width: 400px;  /* Ajusta el ancho de la imagen */
+    height: auto;  /* Mantiene el ratio de aspecto */
+    border-radius: 10px;  /* Opcional: si quieres que los bordes sean redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  /* Difuminado en los bordes */
+    }
+</style>
