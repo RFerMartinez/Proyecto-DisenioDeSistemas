@@ -25,7 +25,7 @@ class ListarProductos(ListView):
     # Definir el modelo sobre el cual se trabajará (para las querys)
     model = Producto
     # Definir la cantidad de productos por páginas
-    paginate_by = 2
+    paginate_by = 6
     # Definir como se hará referenca a los productos desde el template (via context)
     context_object_name = 'productos'
 

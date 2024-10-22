@@ -4,6 +4,12 @@
 
         <a class="navbar-brand text-white" href="{% url 'home' %}">DISTRIBUIDORA</a>
 
+        <!-- <div class="d-none d-md-block">
+            <a href="" class="btn btn-outline-light y-auto">
+                <i class="fas fa-people-carry">Productos</i>
+            </a>
+        </div> -->
+
         {% if not user.is_authenticated %}
         <div class="d-none d-md-block me-3">
             <a href="{% url 'usuarios:IniciarSesion' %}" class="btn btn-outline-light y-auto">

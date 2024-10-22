@@ -120,3 +120,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CONFIGURACIÓN PARA PODER AÑADIR IMÁGENES A LOS PRODUCTOS
+RUTA_CARPETA_MEDIA = os.path.join(BASE_DIR, "media")        # path absoluta para el directorio 'media' (para las imágenes)
+MEDIA_URL = "/media/"
+MEDIA_ROOT = RUTA_CARPETA_MEDIA
+
+print(f"La ruta para carpeta MEDIA: {RUTA_CARPETA_MEDIA}")

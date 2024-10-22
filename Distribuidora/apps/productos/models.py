@@ -27,6 +27,8 @@ class Producto(models.Model):
     cantidad_minima = models.PositiveSmallIntegerField(null=False, blank=False, verbose_name='Cantidad Mínima')
     cantidad_maxima = models.PositiveSmallIntegerField(null=False, blank=False, verbose_name='Cantidad Máxima')
     estado = models.BooleanField(default=True)
+    # IMAGEN
+    imagen = models.ImageField(null=True, blank=True, upload_to="imagenProducto/")
 
     # relaciones a las tablas 'Categoría' y 'Unidad'
     categoria = models.ForeignKey(Categoria, related_name='productos', on_delete=models.CASCADE)
